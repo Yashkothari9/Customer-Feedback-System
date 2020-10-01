@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem List</title>
+
+</head>
+<style>
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    td {
+        height: 50px;
+        vertical-align: bottom;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h1 data-text="Property List">All Customer Greivances</h1>
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>CustomerId</th>
+                <th>ProductId</th>
+                <th>Grievance</th>
+            </tr>
+            <% if(items.length){
+            
+                for(var i = 0;i < items.length;i++) { %>
+            <tr>
+                <% for (var j in items[i]) { %>
+                <td><%=items[i][j]%></td>
+                <% } %>
+            </tr>
+            <% }
+            
+            } %>
+        </table>
+    </div>
+</body>
+
+</html>

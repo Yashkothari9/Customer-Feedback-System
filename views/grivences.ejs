@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Customer Grivences</title>
+</head>
+<style>
+  label,
+  input {
+    display: block;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    margin: 10px 0px;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 5px 15px 20px;
+    background: rgba(173, 255, 47, 0.7);
+    margin: 40px 20px 20px 20px;
+    background-clip: padding-box;
+    color: inherit;
+    border: 1px solid #ced4da;
+    border-radius: 0.55rem;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .submit-button:hover {
+    background: rgba(173, 255, 47, 0.7);
+  }
+
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    margin: 10px 0px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.625rem;
+    resize: vertical;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+</style>
+
+<body
+  style="background-image:url('images/feedback.jpg');background-repeat: no-repeat;background-position:100%;background-size:cover;height: 120vh;">
+  <header>
+    <h1 style="text-align:center;size:150px">Customer Feedback Problem</h1>
+  </header>
+  <main style="margin-top: 50px;">
+    <form id="survey-form" action="/grievance" method="POST"
+      style="background-color: rgba(17, 17, 17);margin-left:25%;padding:5% 5%;opacity:0.9;width:600px">
+      <div class="form-group">
+        <label id="name-label" for="name" style="color:cornsilk">Name:</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your Name" required />
+      </div>
+      <!-- <div class="form-group">
+        <label id="name-label" for="email" style="color:cornsilk">Email Id:</label>
+        <input type="text" name="Email Id" id="Email" class="form-control" placeholder="Enter Your Email-Id" required />
+      </div> -->
+      <div class="form-group">
+        <label id="CustomerId" for="CustomerId" style="color:cornsilk">Customer Id:</label>
+        <input type="text" name="CustomerId" id="CustomerId" class="form-control" placeholder="Enter your Customer Id"
+          required />
+      </div>
+      <div class="form-group">
+        <label id="productId" for="productId" style="color:cornsilk">Product Id:</label>
+        <input type="text" name="ProductId" id="ProductId" class="form-control" placeholder="Enter the Product Id"
+          required />
+      </div>
+      <div class="form-group">
+        <label id="name-label" for="HouseName" style="color:cornsilk">Problem You Are Facing:</label>
+        <textarea name="problem" placeholder="Enter your Problems you are facing" rows="5" cols="80" id="problem"
+          class="input-textarea">
+                  </textarea>
+      </div>
+      <!-- <div class="form-group">
+        <label for="listing Date" style="color:cornsilk">Date:</label>
+        <input type="date" id="Date" style="color:black;" name="Date" required>
+      </div> -->
+      <div class="form-group" style="color:cornsilk">
+        <button type="submit" id="submit" class="submit-button" style="color:green">
+          SUBMIT
+        </button>
+      </div>
+    </form>
+  </main>
+</body>
